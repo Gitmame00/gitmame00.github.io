@@ -24,19 +24,36 @@
         text-align: center;
         box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);
     }
+    .big-free-banner {
+        background: rgba(34, 197, 94, 0.08); /* 優しい緑の背景 */
+        border: 2px dashed #22c55e; /* 親しみやすい点線枠 */
+        border-radius: 25px;
+        padding: 40px 20px;
+        margin: 40px 0;
+        text-align: center;
+    }
+    .big-free-banner .money-icon {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 10px;
+    }
     .big-free-banner .main-text {
-        font-size: 4rem; /* 圧倒的サイズ */
+        font-size: 4rem;
         font-weight: 900;
         color: #22c55e;
         display: block;
-        line-height: 1;
-        margin-bottom: 10px;
-        text-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+        line-height: 1.2;
     }
     .big-free-banner .sub-text {
         font-size: 1.2rem;
         color: #f0f0f0;
-        letter-spacing: 1px;
+        font-weight: bold;
+    }
+    .big-free-banner .reason-text {
+        font-size: 0.9rem;
+        color: #94a3b8;
+        margin-top: 15px;
+        display: block;
     }
     </style>
 </head>
@@ -48,9 +65,10 @@
 
     <!-- 巨大化した無料バナー -->
     <div class="big-free-banner">
-        <span class="sub-text">買い切り・サブスク・AI利用料</span>
+        <span class="money-icon">💰</span>
         <span class="main-text">完全無料</span>
-        <span class="sub-text">あなたのスマホで動くから、コストは０円。</span>
+        <span class="sub-text">月額も、追加課金も、AI利用料もすべて０円</span>
+        <span class="reason-text">高価なクラウドAIを使わず、あなたのスマホ内で直接AIを動かすため、<br>アプリ内での追加費用は一切発生しません。</span>
     </div>
 
     <div class="card">
