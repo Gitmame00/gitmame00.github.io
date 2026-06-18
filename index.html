@@ -6,9 +6,18 @@
     <title>Exa-Vision | あの資料に、引っかかるAI</title>
     <style>
     body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.8; color: #f0f0f0; background: #000814; max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-    .hero { text-align: center; padding: 60px 0; border-bottom: 1px solid #1e293b; }
+
     h1 { font-size: 3.5rem; letter-spacing: 4px; color: #3b82f6; margin-bottom: 10px; }
     .tagline { font-size: 1.2rem; color: #94a3b8; }
+
+    /* ロゴ画像のスタイル */
+    .header-image {
+        width: 100%;
+        max-width: 700px; /* 大きすぎず小さすぎないサイズ */
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+    }    
     
     /* 巨大化した無料バナー（力強いグラデーション版） */
     .big-free-banner {
@@ -54,7 +63,10 @@
 </head>
 <body>
     <div class="hero">
-        <h1>EXA-VISION</h1>
+        <!-- ★文字の代わりに画像を挿入 -->
+        <img src="top-logo.png" alt="Exa-Vision" class="header-image">
+        
+        <!-- 大事なキャッチコピーはテキストとして残す -->
         <p class="tagline">あの資料に、引っかかるAI。記憶を再発見するAIアシスタント。</p>
     </div>
 
