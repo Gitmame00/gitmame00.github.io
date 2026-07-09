@@ -13,21 +13,24 @@
     </style>
 </head>
 <body>
-    <!-- ★ここから貼り付け -->
     <div style="margin-bottom: 20px;">
         <a href="index.html" style="display: inline-block; color: #3b82f6; text-decoration: none; font-weight: bold; font-size: 1rem;">
             ← 戻る / Back to Home
         </a>
     </div>
-    <!-- ★ここまで貼り付け -->
 
     <div class="lang-section">
         <h1>Exa-Vision プライバシーポリシー</h1>
-        <p>最終更新日: 2026年6月14日</p>
+        <p>最終更新日: 2026年7月10日</p>
         <h2>1. データの収集と利用</h2>
         <p>本アプリは、ユーザーのデバイス内のファイルを解析し、検索用インデックス（ベクトルデータ）を作成します。これらのデータは、検索機能の提供およびデータのバックアップのみに使用されます。</p>
         <h2>2. データの保管とプライバシー（オンデバイス処理）</h2>
-        <p>すべての解析処理（OCR、AI推論）はユーザーのデバイス内で完結します。解析されたテキストやベクトルデータが外部のサーバーへ送信されることはありません。原本ファイルおよびデータベースのバックアップは、ユーザー自身のGoogle Drive領域（SyncedおよびBackupsフォルダ）にのみ保存されます。開発者がユーザーのファイルにアクセスすることはできません。</p>
+        <p>すべての解析処理（OCR、AI推論）はユーザーのデバイス内で完結します。解析されたテキストやベクトルデータが外部のサーバーへ送信されることはありません。データはユーザー自身のGoogle Drive領域にのみ保存され、保存先は以下の通り厳別されています。</p>
+        <ul>
+            <li><strong>原本ファイル：</strong>Google Drive上の「Synced」フォルダ内に年別に自動整理して保存されます。</li>
+            <li><strong>データベース：</strong>Google Driveの「アプリ専用の隠し領域（AppData）」に暗号化して保存されます。</li>
+        </ul>
+        <p>開発者がユーザーのファイルやデータベースの内容にアクセスすることは技術的に不可能です。</p>
         <h2>3. セキュリティ</h2>
         <p>データベースおよび通信は AES-256-GCM および PBKDF2 により暗号化され、強固に保護されます。</p>
         <h2>4. 権限の利用</h2>
@@ -38,16 +41,20 @@
 
     <div class="lang-section">
         <h1>Exa-Vision Privacy Policy</h1>
-        <p>Last Updated: June 14, 2026</p>
+        <p>Last Updated: July 10, 2026</p>
         <h2>1. Data Collection and Usage</h2>
         <p>Exa-Vision processes files to create a search index for the user's personal use. This data is used solely for providing search functionality and backup purposes.</p>
         <h2>2. On-Device Processing and Privacy</h2>
-        <p>All AI inference (Embedding) and OCR are performed locally on the user's device. We do not transmit your private documents or AI-generated vectors to any external servers. Your original files and database backups are stored exclusively in your own Google Drive account (within "Synced" and "Backups" folders). The developer has no access to your data.</p>
+        <p>All AI inference (Embedding) and OCR are performed locally on the user's device. We do not transmit your private documents or AI-generated vectors to any external servers. Your data is stored exclusively in your own Google Drive account as follows:</p>
+        <ul>
+            <li><strong>Original Files:</strong> Automatically organized by year within the "Synced" folder on your Google Drive.</li>
+            <li><strong>Database Backup:</strong> Encrypted and stored in a secure, hidden area (Google Drive App Data folder) accessible only by this app.</li>
+        </ul>
+        <p>The developer has no access to your personal files or database contents.</p>
         <h2>3. Data Storage & Security</h2>
         <p>All stored data is encrypted using AES-256-GCM and PBKDF2 to ensure the highest level of privacy and security.</p>
         <h2>4. Permissions</h2>
         <p>Access to Camera and Google Drive is used only for essential app functions such as document scanning and file synchronization.</p>
     </div>
-
 </body>
 </html>
