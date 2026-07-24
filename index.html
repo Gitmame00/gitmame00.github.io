@@ -3,118 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exa-Vision | あの資料に、引っかかるAI</title>
+    <title>Exa-Vision | あなたの知識は、あなたの手元に。</title>
     <style>
     body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.8; color: #f0f0f0; background: #000814; max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-
-    h1 { font-size: 3.5rem; letter-spacing: 4px; color: #3b82f6; margin-bottom: 10px; }
-    .tagline { 
-        font-size: 1.2rem; 
-        color: #94a3b8; 
-        text-align: center; /* ★文字を真ん中に寄せる */
-        margin: 10px auto 0 auto; /* ★上下の余白を調整 */
-        max-width: 80%; /* ★スマホで見た時に長すぎないように調整 */
-    }
 
     /* ロゴ画像のスタイル */
     .header-image {
         width: 100%;
-        max-width: 700px; /* 大きすぎず小さすぎないサイズ */
+        max-width: 600px;
         height: auto;
         display: block;
-        margin: 0 auto 20px auto;
+        margin: 0 auto 30px auto;
     }    
     
-    /* 巨大化した無料バナー（力強いグラデーション版） */
-    .big-free-banner {
-        background: linear-gradient(135deg, #166534 0%, #064e3b 100%); /* 深い緑のグラデーション */
-        border: 2px solid #22c55e;
-        border-radius: 25px;
-        padding: 40px 20px;
-        margin: 40px 0;
+    .hero-text {
         text-align: center;
-        box-shadow: 0 0 30px rgba(34, 197, 94, 0.3); /* 光り輝くエフェクト */
+        margin-bottom: 50px;
     }
-    .big-free-banner .money-icon {
-        font-size: 3rem;
-        display: block;
-        margin-bottom: 10px;
-    }
-    .big-free-banner .main-text {
-        font-size: 4.5rem;
-        font-weight: 900;
-        color: #fff; /* グラデーションの上なので白文字が映えます */
-        display: block;
-        line-height: 1.2;
-        text-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
-    }
-    .big-free-banner .sub-text {
-        font-size: 1.3rem;
+    .hero-text h1 {
+        font-size: 1.8rem;
         color: #fff;
-        font-weight: bold;
+        margin-bottom: 10px;
+        font-weight: 700;
         letter-spacing: 1px;
     }
-    .big-free-banner .reason-text {
-        font-size: 0.95rem;
-        color: rgba(255, 255, 255, 0.8);
-        margin-top: 15px;
-        display: block;
+    .hero-text .subtitle {
+        font-size: 1.1rem;
+        color: #94a3b8;
+        margin-bottom: 25px;
+    }
+    .hero-text .description {
+        font-size: 1.1rem;
+        color: #cbd5e1;
+        max-width: 80%;
+        margin: 0 auto;
+        line-height: 1.6;
     }
 
-    .card { background: #0f172a; padding: 30px; border-radius: 15px; margin: 20px 0; border: 1px solid #1e293b; }
-    .highlight { color: #3b82f6; font-weight: bold; }
-    .footer { text-align: center; margin-top: 50px; font-size: 0.8rem; color: #64748b; }
+    /* 無料バナー（上品にサイズダウン） */
+    .free-banner {
+        background: rgba(22, 101, 52, 0.2);
+        border: 1px solid #22c55e;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 40px auto;
+        text-align: center;
+        max-width: 700px;
+    }
+    .free-banner .main-text {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #22c55e;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .free-banner .sub-text {
+        font-size: 1rem;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .card { background: #0f172a; padding: 35px; border-radius: 20px; margin: 30px 0; border: 1px solid #1e293b; }
+    
+    /* 締め文のスタイル */
+    .conclusion {
+        text-align: center;
+        margin: 60px 0;
+        padding: 0 20px;
+    }
+    .conclusion .question {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #3b82f6;
+        margin-bottom: 15px;
+    }
+    .conclusion .message {
+        font-size: 1.2rem;
+        color: #f0f0f0;
+        line-height: 1.6;
+    }
+
+    /* テスター募集セクション */
+    .tester-box {
+        text-align: center;
+        padding: 40px;
+        border: 2px solid #3b82f6;
+        border-radius: 20px;
+        background: rgba(59, 130, 246, 0.05);
+    }
+    
+    .btn {
+        display: inline-block;
+        background: #3b82f6;
+        color: white;
+        padding: 16px 45px;
+        border-radius: 35px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-top: 15px;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    }
+
+    .footer { text-align: center; margin-top: 60px; font-size: 0.8rem; color: #64748b; }
     a { color: #3b82f6; text-decoration: none; }
 </style>
 </head>
 <body>
+    <!-- ヘッダーロゴ -->
     <div class="hero">
-        <!-- ★文字の代わりに画像を挿入 -->
         <img src="top-logo.jpg" alt="Exa-Vision" class="header-image">
-        
-        <!-- 大事なキャッチコピーはテキストとして残す -->
-        <p class="tagline">あの資料に、引っかかるAI。記憶を再発見するAIアシスタント。</p>
     </div>
 
-    <!-- 巨大化した無料バナー -->
-    <div class="big-free-banner">
-        <span class="money-icon">💰</span>
-        <span class="main-text">完全無料</span>
-        <span class="sub-text">月額も、追加課金も、AI利用料もすべて０円</span>
-        <span class="reason-text">高価なクラウドAIを使わず、あなたのスマホ内で直接AIを動かすため、<br>アプリ内での追加費用は一切発生しません。</span>
+    <!-- 冒頭：ビジョンを訴える -->
+    <div class="hero-text">
+        <h1>あなたの知識は、あなたの手元に。</h1>
+        <p class="subtitle">記憶を再発見するAIアシスタント。</p>
+        <p class="description">
+            ファイルはGoogle Driveと同期。検索・AI処理は端末内で完結。<br><br>
+            Exa-Visionは、PDF・Word・Excel・画像などをまとめて記憶し、<br>
+            必要なときに意味から探せる知識アシスタントです。
+        </p>
     </div>
 
+    <!-- 特徴カード -->
     <div class="card">
-        <h2>🚀 Exa-Vision の特徴</h2>
-        <ul style="list-style: none; padding-left: 0;">
-            <li>✅ <strong>ダウンロードしてすぐ使える</strong></li>
-            <li>👤 <strong>アカウント登録不要</strong></li>
-            <li>🔑 <strong>APIキー不要</strong>（無料AIを内蔵）</li>
-            <li>☁️ <strong>Google Drive連携</strong>（原本同期）</li>
-            <li>📄 <strong>OCR対応</strong>（画像・PDF内の文字も検索）</li>
-            <li>🔍 <strong>曖昧なままでも見つかる意味検索</strong></li>
-            <li>🔒 <strong>データは端末内で処理</strong>（究極のプライバシー）</li>
+        <h2 style="text-align: center; margin-bottom: 25px;">🚀 Exa-Vision の特徴</h2>
+        <ul style="list-style: none; padding-left: 0; line-height: 2.4; display: inline-block; text-align: left; width: 100%; max-width: 500px; margin: 0 auto; display: block;">
+            <li>🔍 <strong>曖昧な記憶でも見つかる「スマート検索」</strong></li>
+            <li>🔒 <strong>100%端末内でAI処理（究極のプライバシー）</strong></li>
+            <li>👥 <strong>仕事と私用を分ける「マルチアカウント対応」</strong></li>
+            <li>⚡ <strong>デジタルPDFを一瞬で読み込む爆速ロード</strong></li>
+            <li>📄 <strong>画像内の文字も探せる高精度OCR</strong></li>
+            <li>☁️ <strong>Google Drive同期による100%の復元性</strong></li>
+            <li>🔑 <strong>アカウント登録・APIキー設定は一切不要</strong></li>
         </ul>
     </div>
 
-    <!-- ★ここから貼り付け：テスター募集セクション -->
-    <div style="text-align: center; margin: 50px 0; padding: 30px; border: 2px solid #3b82f6; border-radius: 15px; background: rgba(59, 130, 246, 0.05);">
-        <h3 style="color: #3b82f6; margin-top: 0;">🚀 ストア公開前のテストにご協力ください</h3>
-        <p style="color: #f0f0f0; font-size: 1rem; line-height: 1.6;">
-            Google Playストアでの一般公開には、20名以上のテスターによる確認が必要です。<br>
-            「完全ローカルAIによるプライバシー保護」というコンセプトに共感いただける方の参加をお待ちしています。
+    <!-- 無料バナー（サイズダウン版） -->
+    <div class="free-banner">
+        <span class="main-text">完全無料</span>
+        <span class="sub-text">月額料金・追加課金・AI利用料はすべて０円</span>
+        <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 10px;">
+            高価なクラウドAIへデータを送信することなく、検索・AI処理はスマートフォン内で実行。<br>
+            プライバシーを守りながら、追加費用なしで使い続けられます。
+        </p>
+    </div>
+
+    <!-- 締め：共鳴するメッセージ -->
+    <div class="conclusion">
+        <p class="question">「あの資料、どこだっけ？」</p>
+        <p class="message">
+            そんな瞬間のために。<br>
+            Exa-Visionは、あなたの知識をいつでも手元で見つけられるようサポートします。
+        </p>
+    </div>
+
+    <!-- テスター募集 -->
+    <div class="tester-box">
+        <h3 style="color: #3b82f6; margin-top: 0; font-size: 1.4rem;">🚀 早期アクセス・テスター募集中</h3>
+        <p style="color: #f0f0f0; font-size: 1rem; line-height: 1.6; margin-bottom: 25px;">
+            Google Playストアでの一般公開に向けた最終テストを実施中です。<br>
+            「自分だけの知識ベース」を共に育てていただける方の参加をお待ちしています。
         </p>
         
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfruxddayzIScZz4z4WoB_R4oBcLfdOtdFOx6yVEL5Hu2RSnA/viewform?usp=publish-editor" 
-           style="display: inline-block; background: #3b82f6; color: white; padding: 15px 35px; border-radius: 30px; font-weight: bold; text-decoration: none; font-size: 1.1rem; margin-top: 10px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfruxddayzIScZz4z4WoB_R4oBcLfdOtdFOx6yVEL5Hu2RSnA/viewform?usp=publish-editor" class="btn">
            テスト協力フォームはこちら
         </a>
         
-        <p style="font-size: 0.8rem; color: #64748b; margin-top: 15px;">
-            ※Android端末をお持ちで、Google Playストアのアカウントをお持ちの方が対象です。
+        <p style="font-size: 0.8rem; color: #64748b; margin-top: 25px;">
+            ※Android 8.0以上の端末をお持ちの方が対象です。
         </p>
     </div>
-    <!-- ★ここまで貼り付け -->
 
     <div class="footer">
         <p>© 2026 Exa-Vision Project</p>
