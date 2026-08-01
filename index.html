@@ -20,13 +20,18 @@
     /* オフライン強調バッジ */
     .offline-badge {
         display: inline-block;
-        background: #3b82f6;
-        color: white;
-        padding: 4px 15px;
-        border-radius: 5px;
-        font-size: 0.9rem;
-        font-weight: bold;
-        margin-bottom: 15px;
+        background: rgba(59, 130, 246, 0.1); /* 10%だけ青く透ける */
+        color: #60a5fa;                     /* 明るめの青色 */
+        padding: 10px 30px;                 /* 上下左右に余裕を持たせて大きく */
+        border-radius: 50px;                /* 角丸を最大にして「ラベル」感を出す */
+        border: 1px solid rgba(59, 130, 246, 0.4); /* うっすら光る境界線 */
+        font-size: 1.1rem;                  /* 文字を一回り大きく */
+        font-weight: 800;                   /* 太字で強調 */
+        letter-spacing: 2px;                /* 文字の間隔を広げてテック感を演出 */
+        margin-bottom: 30px;
+        text-transform: uppercase;          /* 大文字固定 */
+        pointer-events: none;               /* マウスが反応しない（ボタンじゃない） */
+        backdrop-filter: blur(5px);         /* 背後を少しぼかす（高級感） */
     }
 
     .free-banner { background: rgba(22, 101, 52, 0.2); border: 1px solid #22c55e; border-radius: 15px; padding: 20px; margin: 40px auto; text-align: center; max-width: 700px; }
