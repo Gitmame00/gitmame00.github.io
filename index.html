@@ -1,4 +1,4 @@
-<!-- 修正・強化版 Exa-Vision 紹介ページ -->
+<!-- 修正・強化版 Exa-Vision 紹介ページ (Build 53対応版) -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -17,26 +17,28 @@
 
     .card { background: #0f172a; padding: 35px; border-radius: 20px; margin: 30px 0; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
     
-    /* オフライン強調バッジ */
     .offline-badge {
         display: inline-block;
-        background: rgba(59, 130, 246, 0.1); /* 10%だけ青く透ける */
-        color: #60a5fa;                     /* 明るめの青色 */
-        padding: 10px 30px;                 /* 上下左右に余裕を持たせて大きく */
-        border-radius: 50px;                /* 角丸を最大にして「ラベル」感を出す */
-        border: 1px solid rgba(59, 130, 246, 0.4); /* うっすら光る境界線 */
-        font-size: 1.1rem;                  /* 文字を一回り大きく */
-        font-weight: 800;                   /* 太字で強調 */
-        letter-spacing: 2px;                /* 文字の間隔を広げてテック感を演出 */
+        background: rgba(59, 130, 246, 0.1);
+        color: #60a5fa;
+        padding: 10px 30px;
+        border-radius: 50px;
+        border: 1px solid rgba(59, 130, 246, 0.4);
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: 2px;
         margin-bottom: 30px;
-        text-transform: uppercase;          /* 大文字固定 */
-        pointer-events: none;               /* マウスが反応しない（ボタンじゃない） */
-        backdrop-filter: blur(5px);         /* 背後を少しぼかす（高級感） */
+        text-transform: uppercase;
+        pointer-events: none;
+        backdrop-filter: blur(5px);
     }
 
     .free-banner { background: rgba(22, 101, 52, 0.2); border: 1px solid #22c55e; border-radius: 15px; padding: 20px; margin: 40px auto; text-align: center; max-width: 700px; }
     .free-banner .main-text { font-size: 2.2rem; font-weight: 800; color: #22c55e; display: block; margin-bottom: 5px; }
     .free-banner .sub-text { font-size: 1rem; color: #fff; font-weight: bold; }
+
+    .roadmap-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+    .roadmap-item { flex: 1; min-width: 250px; background: rgba(255,255,255,0.02); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
 
     .conclusion { text-align: center; margin: 60px 0; padding: 0 20px; }
     .conclusion .question { font-size: 1.5rem; font-weight: bold; color: #3b82f6; margin-bottom: 15px; }
@@ -78,6 +80,27 @@
                 <li>☁️ <strong>クラウド同期も自由自在</strong>（Google Driveを保管庫に活用可能）</li>
                 <li>🔑 <strong>初期設定・APIキー不要</strong>（インストール後、即「記憶」開始）</li>
             </ul>
+        </div>
+    </div>
+
+    <!-- なぜ無料か？ ＆ ロードマップ -->
+    <div class="card" style="border-left: 5px solid #22c55e;">
+        <h3 style="color: #22c55e; margin-top: 0;">💡 なぜ、完全無料なの？</h3>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: #cbd5e1;">
+            通常のAIアプリは外部サーバーで処理を行うため、莫大な維持費がかかります。
+            Exa-VisionはすべてのAI処理を<strong>あなたのスマートフォン内（オンデバイス）</strong>だけで完結させます。<br><br>
+            通信コストがかからないから、ずっと無料。そして、究極のプライバシーを。
+        </p>
+        <hr style="border: 0; border-top: 1px solid #1e293b; margin: 25px 0;">
+        <div class="roadmap-grid">
+            <div class="roadmap-item">
+                <h4 style="color: #fff; margin-bottom: 10px;">🌱 スタンダード版（現行）</h4>
+                <p style="font-size: 0.85rem; color: #94a3b8;">「入れる・覚える・見つける」の基本機能を永久無料で提供。プライバシー特化の検索エンジンとして。</p>
+            </div>
+            <div class="roadmap-item">
+                <h4 style="color: #3b82f6; margin-bottom: 10px;">🚀 プロ版（開発中）</h4>
+                <p style="font-size: 0.85rem; color: #94a3b8;">検索結果からAIが直接「回答」を生成するRAG機能、Web連携、視覚推論など、さらに高度な知能を搭載予定。</p>
+            </div>
         </div>
     </div>
 
